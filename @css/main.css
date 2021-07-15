@@ -1,16 +1,89 @@
 :root {
-    --touchcinema-header-background: #8ca3b9;
+    --touchcinema-header-background: #FFFFFF;
+    --touchcinema-header-profile-text: #000000;
 }
 
 * {
     box-sizing: border-box;
 }
 
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 body {
     margin: 0;
 }
 
+/**************************** HEADER *****************************/
+
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--touchcinema-header-background);
-    height: 100px;
+    height: 7rem;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo img {
+    height: 6.8em;
+    padding: .2em;
+}
+
+.header__logo span {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.header__profile {
+    margin-right: 2em;
+}
+
+.header__profile_user {
+    display: flex;
+}
+
+.header__profile_menu {
+    display: none;
+    position: absolute;
+    margin: 0 0 0 -1.2em;
+    text-align: right;
+}
+
+.header__profile_menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header__profile_menu li {
+    margin: .6em 0;
+}
+
+.header__profile_menu li a {
+    color: var(--touchcinema-header-profile-text);
+    text-decoration: none;
+}
+
+.header__profile_menu li a:hover {
+    text-decoration: underline;
+}
+
+.header__profile_user:hover ~ div, .header__profile_menu:hover {
+    display: block;
+}
+
+/****************************** MAIN AREA ********************************/
+
+.main__finder {
+    height: 20em;
+}
+
+.main__finder_input {
+    border: .2em solid #AAAAAA;
+    border-radius: 2em;
 }
