@@ -1,0 +1,16 @@
+:root {
+    --touchcinema-header-background: #8ca3b9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: var(--touchcinema-header-background);
+    height: 100px;
+}
