@@ -1,6 +1,7 @@
 :root {
     --touchcinema-header-background: #FFFFFF;
     --touchcinema-header-profile-text: #000000;
+    --touchcinema-main-finder-background: rgba(230, 230, 255, 0.5);
 }
 
 * {
@@ -77,13 +78,88 @@ header {
     display: block;
 }
 
-/****************************** MAIN AREA ********************************/
+/****************************** MAIN AREA ************************************/
 
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvvv FINDER vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 .main__finder {
-    height: 20em;
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .main__finder_input {
-    border: .2em solid #AAAAAA;
+    background-color: var(--touchcinema-main-finder-background);
+    border: .2em solid #4444FF;
     border-radius: 2em;
+    height: 2.5em;
+    width: 70vw;
+    padding: 0 1.5em;
 }
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvvvvvvvvvvvvv CAROUSEL vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+.main__carousel {
+    width: 100vw;
+    overflow-x: scroll;
+    padding: 0 0 0 1.6em;
+    position: relative;
+}
+
+.carousel__container {
+    white-space: nowrap;
+    margin: 4em 0;
+    padding-bottom: .8em;
+}
+
+.carousel__item {
+    background-color: #0000FF;;
+    width: 14em;
+    height: 16em;
+    border-radius: 2em;
+    overflow: hidden;
+    margin-right: .8em;
+    display: inline-block;
+    cursor: pointer;
+    transition: 350ms;
+    transform-origin: center left;
+    position: relative;
+}
+
+.carousel__item:hover ~ .carousel__item {
+    transform: translate3d(7em, 0, 0);
+}
+
+.carousel__container:hover .carousel__item {
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel__item:hover {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.carousel__item_image {
+    width: 14em;
+    height: 16em;
+    object-fit: cover;
+}
+
+.carousel__item_details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    transition: 350ms opacity;
+    font-size: 0.8em;
+    opacity: 0;
+    padding: 0.8em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.carousel__item_details:hover {
+    opacity: 1;
+    transition: 350ms opacity;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
