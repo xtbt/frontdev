@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontdev/@css/main.css">
+    <title>IP.20 Tutos: Login</title>
+</head>
+<body>
+    <header>
+        <section class="header__logo">
+            <img src="/frontdev/@images/logo_ip20.png" alt="IP.20 Logo" />
+            <p>IP.20 Tutos</p>
+        </section>
+        <section class="header__profile">
+            <div class="header__profile_user">
+                <img src="/frontdev/@images/loginicon.png" alt="User" />
+                <p>Perfil/Usuario</p>
+            </div>
+            <div class="header__profile_menu">
+                <ul>
+                    <li><a href="/frontdev/login.html">Cuenta</a></li>
+                    <li><a href="/">Cerrar Sesi&#243;n</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <main class="login">
+        <section class="login_container">
+            <h2>Inicia sesi&#243;n</h2>
+            <form class="login_container__form" id="frm_login">
+                <input class="login_container__input" type="text" name="txt_Email" id="txt_Email" placeholder="Correo electr&#243;nico" />
+                <input class="login_container__input" type="password" name="pwd_Password" id="pwd_Password" placeholder="Contrase&#241;a" />
+                <input class="login_container__submit" type="submit" value="Iniciar Sesi&#243;n" />
+                <div class="login_container__remember_me">
+                    <label class="login_container__label" for="cb_RememberMe">
+                        <input type="checkbox" name="cb_RememberMe" id="cb_RememberMe" value="activated" />Recu&#233;rdame
+                    </label>
+                    <a class="login_container__link_option" href="/">Olvid&#233; mi contrase&#241;a</a>
+                </div>
+            </form>
+            <section class="login_container__social_media_options">
+                <div>
+                    <img src="/frontdev/@images/google.png" alt="Google" /><span>Inicia sesi&#243;n con Google</span>
+                </div>
+                <div>
+                    <img src="/frontdev/@images/twitter.png" alt="Twitter" /><span>Inicia sesi&#243;n con Twitter</span>
+                </div>
+            </section>
+            <p>&#191;No tienes ninguna cuenta? <a class="login_container__link_option--important" href="/frontdev/register.html">Reg&#237;strate</a></p>
+        </section>
+    </main>
+    <footer>
+        <a class="footer__link" href="/">T&#233;rminos de uso</a>
+        <a class="footer__link" href="/">Declaraci&#243;n de privacidad</a>
+        <a class="footer__link" href="/">Centro de ayuda</a>
+    </footer>
+</body>
+</html>
