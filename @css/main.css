@@ -123,16 +123,16 @@ main {
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvv CAROUSEL vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
-.main__carousel {
+.carousel {
     width: 100vw;
     overflow-x: scroll;
     padding: 0 0 0 1.6em;
     position: relative;
+    scrollbar-width: none;
 }
 
-.main__carousel::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+.carousel::-webkit-scrollbar {
+    display: none;
 }
 
 .carousel__container {
