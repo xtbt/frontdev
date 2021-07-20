@@ -123,6 +123,11 @@ main {
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvv CAROUSEL vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
+.carousel_heading{
+    margin: 0.1em 0em;
+    padding: 0.2em 0em;
+}
+
 .carousel {
     width: 100vw;
     overflow-x: scroll;
@@ -303,12 +308,13 @@ main {
 
 /********************************** FOOTER ***********************************/
 footer {
-    background: linear-gradient(to bottom, var(--default-main-background) 0%, var(--ip20-green) 100%);
+    /* background: linear-gradient(to bottom, var(--default-main-background) 0%, var(--ip20-green) 100%); */
+    background-color: var(--default-main-background);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 2em 2em;
+    padding: 4em 2em;
 }
 
 .footer__link {
