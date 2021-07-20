@@ -147,7 +147,6 @@ main {
 }
 
 .carousel__item {
-    /* background-color: #0000FF; */
     width: 14em;
     height: 16em;
     border-radius: 2em;
@@ -180,8 +179,10 @@ main {
 }
 
 .carousel__item_details {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
-    transition: opacity 350ms;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 85%);
+    transition: all 350ms;
+    width: 100%;
+    white-space: normal;
     font-size: 0.8em;
     opacity: 0;
     padding: 0.8em;
@@ -190,13 +191,33 @@ main {
     right: 0;
     bottom: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .carousel__item_details:hover {
     opacity: 1;
-    transition: opacity 350ms;
+    transition: all 350ms;
+}
+
+.carousel__item_detail_option {
+    width: 2em;
+}
+
+.carousel__item_details p {
+    color: #FFFFFF;
+    margin: 0.1em 0;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+.notfound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 18em);
+}
 
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv LOGIN vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 .login {
