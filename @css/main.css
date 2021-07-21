@@ -25,6 +25,11 @@ body {
     margin: 0;
 }
 
+hr {
+    width: 80vw;
+    margin-top: 2em;
+}
+
 /********************************* HEADER ************************************/
 
 header {
@@ -45,9 +50,16 @@ header {
     padding: .2em;
 }
 
-.header__logo p {
-    font-size: 2em;
+/* .header__logo p {
+    display: none;
+} */
+.header__logo_text--mobile {
+    display: inline-block;
+    font-size: 1.8em;
     font-weight: bold;
+}
+.header__logo_text--normal {
+    display: none;
 }
 
 .header__profile {
@@ -65,7 +77,7 @@ header {
     background-color: var(--default-header-profile-menu-background);
     width: 9em;
     border: .1em solid #2f2fa0;
-    text-align: right;
+    text-align: center;
 }
 
 .header__profile_menu ul {
@@ -219,6 +231,12 @@ main {
     min-height: calc(100vh - 18em);
 }
 
+.notfound p {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 1em 2em;
+}
+
 /* vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv LOGIN vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv */
 .login {
     display: flex;
@@ -329,18 +347,19 @@ main {
 
 /********************************** FOOTER ***********************************/
 footer {
-    /* background: linear-gradient(to bottom, var(--default-main-background) 0%, var(--ip20-green) 100%); */
     background-color: var(--default-main-background);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     padding: 4em 2em;
 }
 
+.footer_resources {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .footer__link {
     color: var(--ip20-red);
-    font-size: 0.9em;
     text-decoration: none;
     cursor: pointer;
     margin-top: 1em;
@@ -350,10 +369,15 @@ footer {
     text-decoration: underline;
 }
 
+.footer_copyright {
+    text-align: center;
+}
+
 /*****************************************************************************/
 /***************************** MEDIA QUERIES *********************************/
 /*****************************************************************************/
-@media only screen and (min-width: 340px) {
+
+@media only screen and (min-width: 360px) {
     .login_container {
         background-color: rgba(255, 255, 255, 0.15);
         border: .2em solid var(--default-main-login-link-option-text-color);
@@ -365,7 +389,15 @@ footer {
     html {
         font-size: 0.8rem;
     }
-    footer {
+    .header__logo_text--mobile {
+        display: none;
+    }
+    .header__logo_text--normal {
+        display: inline-block;
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+    .footer_resources {
         flex-direction: row;
         justify-content: space-between;
     }
